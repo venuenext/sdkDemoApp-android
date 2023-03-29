@@ -1,0 +1,34 @@
+pluginManagement {
+  repositories {
+    gradlePluginPortal()
+    google()
+    mavenCentral()
+    jcenter()
+    maven {
+      // TODO: Update your credentials here.
+      url "https://venuenext.jfrog.io/venuenext/android-sdk"
+      credentials {
+        username = "venuenextsdk"
+        password = "DUWwQe3Cen4G3P5y"
+      }
+    }
+  }
+}
+dependencyResolutionManagement {
+  repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+  repositories {
+    google()
+    mavenCentral()
+    jcenter()
+    maven {
+      // TODO: Update your credentials here.
+      url "https://venuenext.jfrog.io/venuenext/android-sdk"
+      credentials {
+        username = "venuenextsdk"
+        password = "DUWwQe3Cen4G3P5y"
+      }
+    }
+  }
+}
+rootProject.name = "Web SDK Demo"
+include ':app'

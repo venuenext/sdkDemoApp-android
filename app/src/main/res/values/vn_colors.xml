@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <!--
+  TODO: This is an example of customizing the app colors.
+  See: https://venuenext.github.io/android-2/color-scheme/
+  -->
+  <color name="vnColorPrimary">#0077C0</color>
+  <color name="vnColorOnPrimary">#C4CED4</color>
+</resources>
