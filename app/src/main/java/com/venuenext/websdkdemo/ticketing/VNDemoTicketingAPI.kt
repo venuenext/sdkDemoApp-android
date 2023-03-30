@@ -32,7 +32,7 @@ class VNDemoTicketingAPI(private val sharedPrefs: SharedPreferences) {
         completion()
     }
 
-    fun getDemoUser(completion: (VNDemoTicketingUser?) -> Void) {
+    fun getDemoUser(completion: (VNDemoTicketingUser?) -> Unit) {
         val demoUserJSON = sharedPrefs.getString(DEMO_USER_KEY, null)
         if (demoUserJSON.isNullOrEmpty()) {
             Log.e("VNDemoTicketingAPI", "Demo user is null")

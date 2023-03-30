@@ -10,6 +10,7 @@ import com.venuenext.websdkdemo.databinding.ActivityMainBinding
 import androidx.navigation.ui.NavigationUI.setupWithNavController
 import com.google.gson.Gson
 import com.venuenext.vnwebsdk.models.User
+import com.venuenext.websdkdemo.ticketing.VNDemoTicketingAPI
 import com.venuenext.websdkdemo.ticketing.VNDemoTicketingUser
 
 class MainActivity : AppCompatActivity() {
@@ -60,20 +61,18 @@ class MainActivity : AppCompatActivity() {
             return
         }
 
-        try {
-            val user = Gson().fromJson(userJSON, VNDemoTicketingUser::class.java)
-            VenueNextWeb.setUser(
-                User(
-                    id = user.userID,
-                    firstName = user.firstName,
-                    lastName = user.lastName,
-                    email = user.email,
-                    phoneNumber = user.phoneNumber
+        VNDemoTicketingAPI(ticketingPrefs).getDemoUser { user ->
+            user?.let {
+                VenueNextWeb.setUser(
+                    User(
+                        id = it.userID,
+                        firstName = it.firstName,
+                        lastName = it.lastName,
+                        email = it.email,
+                        phoneNumber = it.phoneNumber
+                    )
                 )
-            )
-        }
-        catch (e: Exception) {
-            Log.e("MainActivity", "Error parsing user: $userJSON", e)
+            }
         }
     }
 }
