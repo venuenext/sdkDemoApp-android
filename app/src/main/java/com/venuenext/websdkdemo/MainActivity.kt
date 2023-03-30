@@ -45,7 +45,6 @@ class MainActivity : AppCompatActivity() {
          */
         VenueNextWeb.privateKeyAssetName = "arena_dev_pkcs8_private_key.pem"
         setUserIfNeeded()
-        setUserIfNeeded()
     }
 
     /**
