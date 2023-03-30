@@ -3,15 +3,12 @@ package com.venuenext.websdkdemo
 import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import androidx.navigation.findNavController
 import com.venuenext.vnwebsdk.VenueNextWeb
 import com.venuenext.websdkdemo.databinding.ActivityMainBinding
 import androidx.navigation.ui.NavigationUI.setupWithNavController
-import com.google.gson.Gson
 import com.venuenext.vnwebsdk.models.User
 import com.venuenext.websdkdemo.ticketing.VNDemoTicketingAPI
-import com.venuenext.websdkdemo.ticketing.VNDemoTicketingUser
 
 class MainActivity : AppCompatActivity() {
     private val binding by lazy { ActivityMainBinding.inflate(layoutInflater) }
