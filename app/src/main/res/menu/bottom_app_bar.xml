@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" >
+
+  <item
+      android:id="@+id/walletFragment"
+      android:icon="@drawable/ic_baseline_badge_24"
+      android:title="@string/wallet"
+      app:showAsAction="ifRoom" />
+
+  <item
+      android:id="@+id/orderingFragment"
+      android:icon="@drawable/ic_baseline_fastfood_24"
+      android:title="@string/ordering"
+      app:showAsAction="ifRoom" />
+
+  <item
+      android:id="@+id/ticketingFragment"
+      android:icon="@drawable/ic_baseline_account_box_24"
+      android:title="@string/ticketing"
+      app:showAsAction="ifRoom" />
+
+</menu>

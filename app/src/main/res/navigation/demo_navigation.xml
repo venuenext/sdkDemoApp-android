@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/demo_navigation"
+    app:startDestination="@id/walletFragment">
+
+
+  <fragment
+      android:id="@+id/walletFragment"
+      android:name="com.venuenext.websdkdemo.WalletFragment"
+      android:label="fragment_wallet"
+      tools:layout="@layout/fragment_wallet" />
+  <fragment
+      android:id="@+id/orderingFragment"
+      android:name="com.venuenext.websdkdemo.OrderingFragment"
+      android:label="fragment_ordering"
+      tools:layout="@layout/fragment_ordering" />
+  <fragment
+      android:id="@+id/ticketingFragment"
+      android:name="com.venuenext.websdkdemo.ticketing.TicketingFragment"
+      android:label="fragment_ticketing"
+      tools:layout="@layout/fragment_ticketing" />
+</navigation>
