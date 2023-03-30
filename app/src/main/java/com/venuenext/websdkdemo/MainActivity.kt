@@ -35,15 +35,16 @@ class MainActivity : AppCompatActivity() {
          * Omit `env` to point to your production environment, or include it to point to other environments,
          * like "qa" or "dev" (the environment must be created by VN, however).
          */
-        VenueNextWeb.initialize("<YOUR_ORG>","<YOUR_INSTANCE>")
+        VenueNextWeb.initialize("arena","arena", "dev")
 
         /**
          * TODO: A .pem file is needed for authenticating user.
          * If you are planning on allowing users to log in with external accounts, the .pem file must
          * be set. The .pem file should be received from the VenueNext team. You will also need to
          * import your .pem file to Android Studio in the assets resource directory.
-		 */
-        VenueNextWeb.privateKeyAssetName = "<YOUR_PEM_FILE>.pem"
+         */
+        VenueNextWeb.privateKeyAssetName = "arena_dev_pkcs8_private_key.pem"
+        setUserIfNeeded()
         setUserIfNeeded()
     }
 
