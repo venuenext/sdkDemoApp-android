@@ -47,6 +47,12 @@ class MainActivity : AppCompatActivity() {
         setUserIfNeeded()
     }
 
+    /**
+     * TODO: The user must be set with each app launch.
+     * VN does not save the login. If a user is already logged in to your app, don't forget set the VN User. You can experiment with this fake user and contrived ticketing API, or implement your own ticketing integration here.
+     * > Note: See "External login providers" in the VN SDK documentation for more info on supported providers.
+     * > https://venuenext.github.io/android-2/quick-start-guide/
+     * */
     private fun setUserIfNeeded() {
         val ticketingPrefs = getSharedPreferences("TICKETING_PREFS", Context.MODE_PRIVATE)
         val userJSON = ticketingPrefs.getString("demoUser", null)
