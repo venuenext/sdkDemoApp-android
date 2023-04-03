@@ -88,3 +88,14 @@ fastlane/test_output
 # https://github.com/johnno1962/injectionforxcode
 
 iOSInjectionProject/
+/.gradle/file-system.probe
+/.gradle/buildOutputCleanup/outputFiles.bin
+/.gradle/buildOutputCleanup/buildOutputCleanup.lock
+/.gradle/7.4/fileHashes/resourceHashesCache.bin
+/.gradle/7.4/fileHashes/fileHashes.lock
+/.gradle/7.4/fileHashes/fileHashes.bin
+/.gradle/7.4/executionHistory/executionHistory.lock
+/.gradle/7.4/executionHistory/executionHistory.bin
+/.gradle/7.4/checksums/sha1-checksums.bin
+/.gradle/7.4/checksums/md5-checksums.bin
+/.gradle/7.4/checksums/checksums.lock

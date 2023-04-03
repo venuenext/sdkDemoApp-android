@@ -43,14 +43,14 @@ dependencies {
   implementation "androidx.viewpager2:viewpager2:1.0.0"
   implementation "androidx.navigation:navigation-fragment-ktx:2.5.3"
   implementation "androidx.navigation:navigation-ui-ktx:2.5.3"
-  implementation 'com.google.code.gson:gson:2.8.9'
+  implementation 'com.google.code.gson:gson:2.9.0'
   testImplementation 'junit:junit:4.13.2'
   androidTestImplementation 'androidx.test.ext:junit:1.1.5'
   androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
 
   //////// VN Web SDK Dependencies ////////
   // VN Web SDK
-  implementation 'com.venuenext:vnwebsdk:2.1.1'
+  implementation 'com.venuenext:vnwebsdk:v2.2.0'
 
   // Kotlin
   implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
