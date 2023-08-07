@@ -3,6 +3,8 @@ package com.venuenext.websdkdemo
 import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
+import android.widget.Toast
 import androidx.navigation.findNavController
 import com.venuenext.vnwebsdk.VenueNextWeb
 import com.venuenext.websdkdemo.databinding.ActivityMainBinding
@@ -42,6 +44,9 @@ class MainActivity : AppCompatActivity() {
          * import your .pem file to Android Studio in the assets resource directory.
 		 */
         VenueNextWeb.privateKeyAssetName = "<YOUR_PEM_FILE>.pem"
+        VenueNextWeb.configureAnalytics(
+            VNDemoAnalyticsInterface(::onAnalyticsEvent)
+        )
         setUserIfNeeded()
     }
 
@@ -71,5 +76,11 @@ class MainActivity : AppCompatActivity() {
                 )
             }
         }
+    }
+
+    private fun onAnalyticsEvent(map: Map<String, Any>) {
+        val message = "Analytic Event:\r\n\t$map"
+        Log.i("VN_ANALYTIC_EVENT", message)
+        Toast.makeText(this, message, Toast.LENGTH_LONG).show()
     }
 }
