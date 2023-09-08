@@ -90,3 +90,6 @@ fastlane/test_output
 iOSInjectionProject/
 /.gradle/*
 /.idea/*
+/local.properties
+.gradle/*
+.idea/*

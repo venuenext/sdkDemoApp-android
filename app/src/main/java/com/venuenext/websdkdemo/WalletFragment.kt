@@ -22,6 +22,7 @@ private const val SCANNER = "Scanner"
 private const val QR_CODE = "QR Code"
 private const val ORDER_HISTORY = "Order History"
 private const val RECEIPT = "Order Receipt"
+private const val LOAD_TICKET = "Load Ticket"
 
 class WalletFragment : Fragment() {
     private val binding by lazy { FragmentWalletBinding.inflate(layoutInflater) }
@@ -38,7 +39,8 @@ class WalletFragment : Fragment() {
         SCANNER,
         QR_CODE,
         ORDER_HISTORY,
-        RECEIPT
+        RECEIPT,
+        LOAD_TICKET
     )
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -77,7 +79,8 @@ class WalletFragment : Fragment() {
             SCANNER -> VNNavigationController.showScanner(requireContext())
             QR_CODE -> VNNavigationController.showQrCode(requireContext())
             ORDER_HISTORY -> VNNavigationController.showOrderHistory(requireContext())
-            RECEIPT -> VNNavigationController.showOrderReceipt("YOUR_RECEIPT_ID", requireContext())
+            RECEIPT -> VNNavigationController.showOrderReceipt("0b3dd57f-d172-48b6-87d3-4c4e1292c6a6", requireContext())
+            LOAD_TICKET -> VNNavigationController.showLoadTicket(requireContext())
             else -> Toast.makeText(requireContext(), "Unsupported selection.", Toast.LENGTH_SHORT).show()
         }
     }
