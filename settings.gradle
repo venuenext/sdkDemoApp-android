@@ -5,11 +5,11 @@ pluginManagement {
     mavenCentral()
     jcenter()
     maven {
-      // TODO: Update your credentials here.
+      // TODO: Update your credentials here, or add them to your bash profile
       url "https://venuenext.jfrog.io/venuenext/android-sdk"
       credentials {
-        username = "venuenextsdk"
-        password = "DUWwQe3Cen4G3P5y"
+        System.getenv('VN_JFROG_USER')
+        password = System.getenv('VN_JFROG_PASSWORD')
       }
     }
   }
@@ -21,11 +21,11 @@ dependencyResolutionManagement {
     mavenCentral()
     jcenter()
     maven {
-      // TODO: Update your credentials here.
+      // TODO: Update your credentials here, or add them to your bash profile
       url "https://venuenext.jfrog.io/venuenext/android-sdk"
       credentials {
-        username = "venuenextsdk"
-        password = "DUWwQe3Cen4G3P5y"
+        username = System.getenv('VN_JFROG_USER')
+        password = System.getenv('VN_JFROG_PASSWORD')
       }
     }
   }
