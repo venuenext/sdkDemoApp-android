@@ -8,7 +8,8 @@ data class VNDemoTicketingUser(
     val firstName: String,
     val lastName: String,
     val email: String,
-    val phoneNumber: String
+    val phoneNumber: String? = null,
+    val provider: String? = null,
 ) {
     companion object {
         fun fromJSON(string: String): VNDemoTicketingUser? {

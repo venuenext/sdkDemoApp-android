@@ -10,7 +10,7 @@ class VNDemoAnalyticsInterface(val callback: AnalyticsEventListener): VNAnalytic
         itemName: String,
         itemCategory: String,
         variant: String,
-        price: Double,
+        price: Int,
         quantity: Long
     ) {
         val eventData = mapOf(
@@ -43,10 +43,10 @@ class VNDemoAnalyticsInterface(val callback: AnalyticsEventListener): VNAnalytic
     override fun trackCompletedPurchase(
         orderId: String,
         quantity: Int,
-        discount: Double,
-        tips: Double,
-        tax: Double,
-        total: Double,
+        discount: Int,
+        tips: Int,
+        tax: Int,
+        total: Int,
         paymentTypes: String,
         name: String?,
         email: String?
@@ -72,7 +72,7 @@ class VNDemoAnalyticsInterface(val callback: AnalyticsEventListener): VNAnalytic
         itemName: String,
         itemCategory: String,
         variant: String,
-        price: Double
+        price: Int
     ) {
         val eventData = mapOf(
             "itemId" to itemId,
