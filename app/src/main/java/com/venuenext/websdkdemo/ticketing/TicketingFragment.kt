@@ -51,10 +51,6 @@ class TicketingFragment: Fragment() {
         handleSelection(demoMethods[position])
     }
 
-    /*
-	 TODO: This is a contrived login/logout flow. You can use this to test with a fake user, or you
-	  can replace with your own ticketing integration to test with real users.
-	 */
     private fun handleSelection(selection: String) {
         when(selection) {
             LOGIN -> handleLogin()

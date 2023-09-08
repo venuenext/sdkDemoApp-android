@@ -65,7 +65,6 @@ class WalletFragment : Fragment() {
         handleSelection(demoMethods[position])
     }
 
-    // TODO: Update IDs as needed
     private fun handleSelection(selection: String) {
         when(selection) {
             MY_INFO -> VNNavigationController.showMyInfo(requireContext())

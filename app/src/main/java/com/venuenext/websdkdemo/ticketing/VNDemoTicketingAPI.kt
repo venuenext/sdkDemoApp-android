@@ -8,7 +8,7 @@ import android.widget.LinearLayout
 import androidx.appcompat.app.AlertDialog
 
 /*
- TODO: This is a contrived example of a ticketing integration.
+ This is a contrived example of a ticketing integration.
  For best results, please test with your own ticketing integration.
 
  *** DISCLOSURE ***

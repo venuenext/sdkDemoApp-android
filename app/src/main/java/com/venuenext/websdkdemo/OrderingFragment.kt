@@ -73,24 +73,23 @@ class OrderingFragment : Fragment() {
         handleSelection(demoMethods[position])
     }
 
-    // TODO: Update IDs as needed
     private fun handleSelection(selection: String) {
         when(selection) {
             ALL_RVCS -> VNNavigationController.showRvCs(requireContext())
             ALL_FOOD -> VNNavigationController.showFnB(requireContext())
             SPECIFIC_FOOD -> VNNavigationController.showFnBMenu(
-                "<YOUR_MENU_ID>",
+                "cde84c5d-6b0a-4d1b-a446-6c910076f8bd",
                 requireContext()
             )
             ALL_MERCH -> VNNavigationController.showMerchandise(requireContext())
             SPECIFIC_MERCH -> VNNavigationController.showMerchandiseMenu(
-                "<YOUR_MENU_ID>",
+                "2421c49c-4deb-403e-8b8c-8d0b0dc43840",
                 requireContext()
             )
             ALL_EXPERIENCE -> VNNavigationController.showExperiences(requireContext())
             SPECIFIC_EXPERIENCE -> VNNavigationController.showExperienceMenu(
-                "<YOUR_MENU_ID>",
-                "<YOUR_EVENT_ID>",
+                "399f78b7-5576-48e2-abd8-99d390c042ee",
+                null,
                 requireContext()
             )
             PICKUP -> VNNavigationController.showFnB(
