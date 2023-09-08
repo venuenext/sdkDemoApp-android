@@ -72,7 +72,7 @@ class TicketingFragment: Fragment() {
             return
         }
 
-        ticketingAPI.login { user ->
+        ticketingAPI.login(requireContext()) { user ->
             setVNUser(user)
             val message = "Successfully logged in ${user.firstName} ${user.lastName}"
             Toast.makeText(requireContext(), message, Toast.LENGTH_SHORT).show()
