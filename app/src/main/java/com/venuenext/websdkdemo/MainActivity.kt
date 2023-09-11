@@ -1,6 +1,7 @@
 package com.venuenext.websdkdemo
 
 import android.content.Context
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -20,11 +21,27 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
         initVN()
+        handleIntent(intent)
     }
 
     override fun onStart() {
         super.onStart()
         setupWithNavController(binding.bottomNavigationView, navHost)
+    }
+
+    override fun onNewIntent(newIntent: Intent?) {
+        super.onNewIntent(newIntent)
+        handleIntent(newIntent)
+    }
+
+    private fun handleIntent(newIntent: Intent?) {
+        if (newIntent?.action == Intent.ACTION_VIEW) {
+            newIntent.data?.let {
+                if (VenueNextWeb.canHandleDeepLink(it)) {
+                    VenueNextWeb.handleDeepLink(binding.root, it, this)
+                }
+            }
+        }
     }
 
     private fun initVN() {
