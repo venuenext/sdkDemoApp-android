@@ -38,18 +38,18 @@ android {
 }
 
 dependencies {
-  implementation 'com.google.android.material:material:1.9.0'
+  implementation 'com.google.android.material:material:1.11.0'
   implementation "androidx.viewpager2:viewpager2:1.0.0"
-  implementation "androidx.navigation:navigation-fragment-ktx:2.7.2"
-  implementation "androidx.navigation:navigation-ui-ktx:2.7.2"
-  implementation 'com.google.code.gson:gson:2.9.0'
+  implementation "androidx.navigation:navigation-fragment-ktx:2.7.6"
+  implementation "androidx.navigation:navigation-ui-ktx:2.7.6"
+  implementation 'com.google.code.gson:gson:2.10.1'
   testImplementation 'junit:junit:4.13.2'
   androidTestImplementation 'androidx.test.ext:junit:1.1.5'
   androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
 
   //////// VN Web SDK Dependencies ////////
   // VN Web SDK
-  implementation 'com.venuenext:vnwebsdk:2.3.0'
+  implementation 'com.venuenext:vnwebsdk:2.4.0'
 
   // Kotlin
   implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
@@ -62,9 +62,9 @@ dependencies {
   implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
 
   // JWT
-  api 'io.jsonwebtoken:jjwt-api:0.11.2'
-  runtimeOnly 'io.jsonwebtoken:jjwt-impl:0.11.2'
-  runtimeOnly('io.jsonwebtoken:jjwt-orgjson:0.11.2') {
+  api 'io.jsonwebtoken:jjwt-api:0.11.5'
+  runtimeOnly 'io.jsonwebtoken:jjwt-impl:0.11.5'
+  runtimeOnly('io.jsonwebtoken:jjwt-orgjson:0.11.5') {
     exclude group: 'org.json', module: 'json' //provided by Android natively
   }
   /////////////////////////////////////////

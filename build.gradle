@@ -4,7 +4,7 @@ buildscript {
   ext {
     build_tools_version = '4.0.0'
     dokka_version = '0.10.1'
-    kotlin_version = '1.8.22'
+    kotlin_version = '1.9.10'
     serialization_version = '1.0.1'
   }
   dependencies {

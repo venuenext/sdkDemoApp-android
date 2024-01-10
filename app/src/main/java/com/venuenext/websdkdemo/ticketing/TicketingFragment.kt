@@ -11,11 +11,13 @@ import android.widget.ArrayAdapter
 import android.widget.Toast
 import com.google.gson.Gson
 import com.venuenext.vnwebsdk.VenueNextWeb
+import com.venuenext.vnwebsdk.analytics.AnalyticsEnabledStatusProvider
 import com.venuenext.vnwebsdk.models.User
 import com.venuenext.websdkdemo.databinding.FragmentTicketingBinding
 
 private const val LOGIN = "Login"
 private const val LOGOUT = "Logout"
+private const val TOGGLE_ANALYTICS_ENABLED = "Toggle Analytics Enabled"
 
 class TicketingFragment: Fragment() {
     private val binding by lazy { FragmentTicketingBinding.inflate(layoutInflater) }
@@ -26,7 +28,8 @@ class TicketingFragment: Fragment() {
 
     private val demoMethods = arrayOf(
         LOGIN,
-        LOGOUT
+        LOGOUT,
+        TOGGLE_ANALYTICS_ENABLED
     )
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -59,6 +62,7 @@ class TicketingFragment: Fragment() {
         when(selection) {
             LOGIN -> handleLogin()
             LOGOUT -> handleLogout()
+            TOGGLE_ANALYTICS_ENABLED -> toggleAnalytics()
             else -> Toast.makeText(requireContext(), "Unsupported selection.", Toast.LENGTH_SHORT).show()
         }
     }
@@ -84,6 +88,19 @@ class TicketingFragment: Fragment() {
             logoutUser()
             Toast.makeText(requireContext(), "Successfully logged out.", Toast.LENGTH_SHORT).show()
         }
+    }
+
+    private fun toggleAnalytics() {
+        val statusProvider = AnalyticsEnabledStatusProvider()
+        val newAnalyticsEnabledStatus = !statusProvider.checkAnalyticsEnabledStatus(
+            requireContext()
+        )
+        Toast.makeText(
+            requireContext(),
+            "Setting analytics enabled status to: $newAnalyticsEnabledStatus",
+            Toast.LENGTH_SHORT
+        ).show()
+        statusProvider.setEnabledStatus(requireContext(), newAnalyticsEnabledStatus)
     }
 
     private fun setVNUser(user: VNDemoTicketingUser) = VenueNextWeb.setUser(
