@@ -45,7 +45,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun initVN() {
-        VenueNextWeb.initialize("arena","arena", "dev")
+        VenueNextWeb.initialize("hornets","cha")
         VenueNextWeb.privateKeyAssetName = "private_key.pem"
         VenueNextWeb.configureAnalytics(
             VNDemoAnalyticsInterface(::onAnalyticsEvent)
