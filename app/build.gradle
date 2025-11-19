@@ -49,7 +49,7 @@ dependencies {
 
   //////// VN Web SDK Dependencies ////////
   // VN Web SDK
-  implementation 'com.venuenext:vnwebsdk:2.5.0'
+  implementation 'com.venuenext:vnwebsdk:2.6.0'
 
   // Kotlin
   implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
