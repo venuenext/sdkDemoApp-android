@@ -3,7 +3,6 @@ pluginManagement {
     gradlePluginPortal()
     google()
     mavenCentral()
-    jcenter()
     maven {
       url "https://venuenext.jfrog.io/venuenext/android-sdk"
       credentials {
@@ -18,7 +17,6 @@ dependencyResolutionManagement {
   repositories {
     google()
     mavenCentral()
-    jcenter()
     maven {
       url "https://venuenext.jfrog.io/venuenext/android-sdk"
       credentials {
