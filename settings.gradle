@@ -3,7 +3,6 @@ pluginManagement {
     gradlePluginPortal()
     google()
     mavenCentral()
-    jcenter()
     maven {
       // TODO: Update your credentials here, or add them to your bash profile
       url "https://venuenext.jfrog.io/venuenext/android-sdk"
@@ -19,7 +18,6 @@ dependencyResolutionManagement {
   repositories {
     google()
     mavenCentral()
-    jcenter()
     maven {
       // TODO: Update your credentials here, or add them to your bash profile
       url "https://venuenext.jfrog.io/venuenext/android-sdk"
