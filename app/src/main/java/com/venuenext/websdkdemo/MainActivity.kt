@@ -71,7 +71,8 @@ class MainActivity : AppCompatActivity() {
                         firstName = it.firstName,
                         lastName = it.lastName,
                         email = it.email,
-                        phoneNumber = it.phoneNumber
+                        phoneNumber = it.phoneNumber,
+                        provider = it.provider
                     )
                 )
             }

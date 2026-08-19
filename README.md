@@ -77,7 +77,8 @@ Remember, it is the integrator's responsibility to track the status of external 
                     firstName = user.firstName,
                     lastName = user.lastName,
                     email = user.email,
-                    phoneNumber = user.phoneNumber
+                    phoneNumber = user.phoneNumber,
+                    provider = user.provider
                 )
             )
         }
